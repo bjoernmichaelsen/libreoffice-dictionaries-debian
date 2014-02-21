@@ -3,7 +3,7 @@ Section: text
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: Debian OpenOffice Team <debian-openoffice@lists.debian.org>
-Build-Depends: debhelper (>> 4.0.0), dpatch
+Build-Depends: debhelper (>> 4.0.0)
 Build-Depends-Indep: unzip, libmythes-dev
 Standards-Version: 3.7.2
 
