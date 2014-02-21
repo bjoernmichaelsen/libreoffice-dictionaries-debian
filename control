@@ -271,16 +271,6 @@ Description: German dictionary for hunspell ("frami" version)
  some words missing in the base dictionary or not (yet) belonging to the
  "core" German words.
 
-Package: hunspell-fr
-Architecture: all
-Section: text
-Depends: dictionaries-common (>= 0.10) | openoffice.org-updatedicts, ${misc:Depends}
-Provides: hunspell-dictionary, hunspell-dictionary-fr
-Suggests: hunspell, openoffice.org-hunspell | openoffice.org-core (>= 2.0.2)
-Conflicts: myspell-fr, myspell-fr-gut, openoffice.org (<= 1.0.3-2), myspell-da, mozilla-browser (<< 1.8+1.1.1-2), iceape-browser (<< 1.1.1-2), firefox (<< 2.0.0.3-2), thunderbird (<< 2.0.0.1+0dfsg-0), iceweasel (<< 2.0.0.3-2), icedove (<< 2.0.0.0-4), openoffice.org-core (<< 2.1~m190-1), libxul0d (= 1.8.0.11-3)
-Description: French dictionary for hunspell
- This is the French dictionary for use with the hunspell spellchecker
-
 Package: hunspell-vi
 Architecture: all
 Section: text
