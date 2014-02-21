@@ -1,0 +1,139 @@
+#!/usr/bin/make -f
+
+#export DH_VERBOSE=1
+
+export DH_OPTIONS
+
+include /usr/share/dpatch/dpatch.make
+
+configure: configure-stamp
+configure-stamp: patch-stamp
+	dh_testdir
+	touch configure-stamp
+
+build: build-arch build-indep
+
+build-arch: build-arch-stamp
+build-arch-stamp: configure-stamp 
+	touch build-arch-stamp	
+
+build-indep: build-indep-stamp
+build-indep-stamp: configure-stamp 
+	cd cs_CZ && \
+		unzip th_cs_CZ_v2.zip && \
+		/usr/share/mythes/th_gen_idx.pl -o th_cs_CZ_v2.idx < th_cs_CZ_v2.dat
+	cd ru_RU && \
+		unzip th_ru_RU_v2.zip && \
+		/usr/share/mythes/th_gen_idx.pl -o th_ru_RU_v2.idx < th_ru_RU_v2.dat
+	cd ne_NP && \
+		unzip th_ne_NP_v2.zip && \
+		/usr/share/mythes/th_gen_idx.pl -o th_ne_NP_v2.idx < th_ne_NP_v2.dat
+	cd hu_HU && \
+		/usr/share/mythes/th_gen_idx.pl -o th_hu_HU_v2.idx < th_hu_HU_v2.dat
+	# no, no fr_FR here, that zip actually is *older* than the th_fr_v2
+	# lying in the same dir...
+
+	touch build-indep-stamp
+
+clean: unpatch
+	dh_testdir
+	dh_testroot
+	rm -f build-arch-stamp build-indep-stamp configure-stamp
+	for pkg in `dh_listpackages`; do \
+		rm -f debian/$$pkg.postinst; rm -f debian/$$pkg.postrm; \
+	done
+	
+	rm -f en_US/th_en_US_v2.dat \
+		en_US/th_en_US_v2.idx
+	rm -f cs_CZ/th_cs_CZ_v2.dat \
+		cs_CZ/th_cs_CZ_v2.idx
+	rm -f sk_SK/th_sk_SK_v2.dat \
+		sk_SK/th_sk_SK_v2.idx
+	rm -f ru_RU/th_ru_RU_v2.dat \
+		ru_RU/th_ru_RU_v2.idx
+	rm -f ne_NP/th_ne_NP_v2.dat \
+		ne_NP/th_ne_NP_v2.idx
+	rm -f hu_HU/th_hu_HU_v2.idx
+
+	dh_clean
+
+install: install-indep install-arch
+install-indep:
+	dh_testdir
+	dh_testroot
+	dh_clean -k -i
+	dh_installdirs -i
+
+	mkdir -p $(CURDIR)/debian/tmp/usr/share/myspell/dicts
+	mkdir -p $(CURDIR)/debian/tmp/usr/share/hunspell
+	mkdir -p $(CURDIR)/debian/tmp/usr/share/mythes
+	mkdir -p $(CURDIR)/debian/tmp/usr/share/hyphen
+	mkdir -p $(CURDIR)/debian/tmp/usr/share/myspell/infos/ooo
+
+	for dic in `find . -type f -name "hyph*.dic"`; do \
+		install -m644 $$dic \
+			$(CURDIR)/debian/tmp/usr/share/hyphen; \
+	done
+	for dic in `find . -type f -name "*.dic" ! -name "hyph*"`; do \
+		install -m644 $$dic \
+			$(CURDIR)/debian/tmp/usr/share/hunspell; \
+	done
+	for aff in `find . -type f -name "*.aff"`; do \
+		install -m644 $$aff \
+			$(CURDIR)/debian/tmp/usr/share/hunspell; \
+	done
+	for dat in `find . -type f -name "*.dat"`; do \
+		install -m644 $$dat \
+			$(CURDIR)/debian/tmp/usr/share/mythes; \
+	done
+	for idx in `find . -type f -name "*.idx"`; do \
+		install -m644 $$idx \
+			$(CURDIR)/debian/tmp/usr/share/mythes; \
+	done
+
+	dh_install --sourcedir=$(CURDIR)/debian/tmp -i
+	
+	for pkg in `dh_listpackages`; do \
+		if [ -e debian/$$pkg.dictlistinfo ]; then \
+			mkdir -p $(CURDIR)/debian/$$pkg/usr/share/myspell/infos/ooo; \
+			install -m644 debian/$$pkg.dictlistinfo \
+		  	  $(CURDIR)/debian/$$pkg/usr/share/myspell/infos/ooo/$$pkg; \
+		fi; \
+	done
+
+install-arch:
+
+# Must not depend on anything. This is to be called by
+# binary-arch/binary-multi
+# in another 'make' thread.
+binary-common:
+	dh_testdir
+	dh_testroot
+	for pkg in `dh_listpackages`; do \
+		cp debian/postrm.in debian/$$pkg.postrm; \
+		cp debian/postinst.in debian/$$pkg.postinst; \
+	done
+	dh_installchangelogs 
+	dh_installdocs
+	for pkg in `dh_listpackages`; do \
+		if [ ! -e debian/$$pkg.copyright ]; then \
+			install -m644 debian/std-copyright \
+			 $(CURDIR)/debian/$$pkg/usr/share/doc/$$pkg/copyright; \
+		fi; \
+	done
+	dh_link
+	dh_compress 
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol -- -v1:3.3.0-`head -n 1 debian/changelog | awk '{ print $$2 }' | sed -e s/"("// -e s/")"// | cut -d"-" -f2`
+#	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-indep: build-indep install-indep
+	$(MAKE) -f debian/rules DH_OPTIONS=-i binary-common
+
+binary-arch: build-arch install-arch
+
+binary: binary-arch binary-indep
+.PHONY: build clean binary-indep binary-arch binary install install-indep install-arch configure

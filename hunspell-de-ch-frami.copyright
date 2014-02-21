@@ -1,0 +1,16 @@
+This package was debianized by Rene Engelhard <rene@debian.org> on
+Sun, 18 Oct 2009 19:55:53 +0100.
+
+It was downloaded from Subversion:
+        svn co svn://svn@svn.services.openoffice.org/ooo/tags/OOO320_m2/dictionaries
+
+Upstream author: Franz Michael Baumann <frami.baumann@web.de>
+based on igerman98 by Björn Jacke <bjoern@j3e.de>
+
+License:
+
+GNU GPL v2
+
+On Debian Systems, a copy of the GPL v2 could be found on
+/usr/share/common-licenses/GPL-2.
+

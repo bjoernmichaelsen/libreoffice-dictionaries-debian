@@ -1,0 +1,33 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 03_Iceanimals.dpatch by  <rene@debian.org>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: add our Ice animals :-)
+
+@DPATCH@
+diff -urNad openoffice.org-dictionaries-2.0.2.99.2.0.3rc5~/dictionaries/en_US/en_US.dic openoffice.org-dictionaries-2.0.2.99.2.0.3rc5/dictionaries/en_US/en_US.dic
+--- dictionaries/en_US/en_US.dic	2006-06-08 16:32:13.000000000 +0200
++++ dictionaries/en_US/en_US.dic	2007-04-02 00:36:30.000000000 +0200
+@@ -27002,12 +27002,14 @@
+ Icarus/M
+ ICBM/S
+ ICC
++Iceape/M
+ iceberg/SM
+ iceboat/MS
+ icebound
+ icebox/MS
+ icebreaker/SM
+ icecap/SM
++Icedove/M
+ ice/GDSC
+ Icelander/M
+ Icelandic
+@@ -27018,6 +27020,7 @@
+ icepack
+ icepick/S
+ ice's
++Iceweasel/M
+ Ichabod/M
+ ichneumon/M
+ ichthyologist/MS

@@ -1,0 +1,15 @@
+This package was debianized by Rene Engelhard <rene@debian.org> on
+Sun, 28 Aug 2005 23:31:31 +020
+
+It was downloaded from CVS:
+        export CVSROOT=":pserver:anoncvs@anoncvs.services.openoffice.org:/cvs"
+        cvs login
+        <empty password>
+        cvs co -r cws_src680_swahilidict dictionaries/sw_TZ
+
+Upstream Author:  Alberto Escudero-Pascual <aep@it46.se>
+
+Copyright:
+
+LGPL; on Debian systems the full text of the LGPL could be found in
+/usr/share/common-licenses.

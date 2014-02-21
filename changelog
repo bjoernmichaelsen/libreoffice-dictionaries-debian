@@ -1,0 +1,562 @@
+openoffice.org-dictionaries (1:3.3.0~rc10-2ubuntu3) oneiric; urgency=low
+
+  * hunspell-ro: fixed conflict with Thunderbird (LP: #773136)
+
+ -- Alexandru Cucu <alexandru.cucu@ubuntu.ro>  Mon, 04 Jul 2011 23:10:07 +0300
+
+openoffice.org-dictionaries (1:3.3.0~rc10-2ubuntu2) natty; urgency=low
+
+  * added versioned conflicts/replaces
+
+ -- Bjoern Michaelsen <bjoern.michaelsen@canonical.com>  Mon, 28 Mar 2011 15:45:51 +0200
+
+openoffice.org-dictionaries (1:3.3.0~rc10-2ubuntu1) natty; urgency=low
+
+  * Merge from debian unstable. Remaining changes:
+   + debian/control:
+    - Add dependencies on language-support-writing-* so that pulling one
+      dictionary (by langpack for instance) doesn't pull OOo.
+    - Fix the unversioned thunderbird entry in Conflicts for the hunspell-*
+      packages.
+   + debian/*.links:
+    - Add missing symlinks between myspell/hunspell/mythes
+      These should be obsolete with OOo/LO 3.0.0 or higher. They should be
+      removed along with the others when debian does so.
+
+ -- Bjoern Michaelsen <bjoern.michaelsen@canonical.com>  Wed, 09 Mar 2011 18:47:23 +0100
+
+openoffice.org-dictionaries (1:3.3.0~rc10-2) unstable; urgency=low
+
+  * upload to unstable
+  * version binary packages 1:3.3.0-x 
+  * OpenOffice.org -> LibreOffice/OpenOffice.org; fixup -frami
+    Descriptions 
+  * actually add comflicts/replaces/provides
+  * recommend libreoffice-writer | openoffice.org-writer in hyphen-* 
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 06 Feb 2011 19:46:02 +0000
+
+openoffice.org-dictionaries (1:3.3.0~rc10-1) experimental; urgency=low
+
+  * new upstream release candidate
+  * rename openoffice.org-thesaurus-* -> mythes-*;
+    rename openoffice.org-hyphenation-* -> hyphen-*
+  * provide mythes-thesaurus(-xx) instead of openoffice.org2-thesaurus-(xx)
+  * provide hyphen-hyphenation-patterns instead of openoffice.org-hyphenation
+  * add ${misc:Depends} 
+  * allow LibreOffice in Depends: 
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 19 Jan 2011 22:33:47 +0100
+
+openoffice.org-dictionaries (1:3.3.0~rc9-1) experimental; urgency=low
+
+  * new upstream release candidate
+  * includes fixes for serbian hyphenation patterns (closes: #590615)
+  * remove 02_Debian.dpatch; LibreOffices new technical.dic already containbs
+    it
+  * include "gedurft" in de_DE_frami.dic (closes: #607771) 
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 09 Jan 2011 16:53:18 +0100
+
+openoffice.org-dictionaries (1:3.2.1-2ubuntu1) maverick; urgency=low
+
+  * Merge from debian unstable. Remaining changes:
+   + debian/control:
+    - Add dependencies on language-support-writing-* so that pulling one
+      dictionary (by langpack for instance) doesn't pull OOo.
+    - Fix the unversioned thunderbird entry in Conflicts for the hunspell-*
+      packages.
+    - Conflicts/Replaces: openoffice.org-thesaurus << 0.6 in -fr for BE
+   + debian/*.links:
+    - Add missing symlinks between myspell/hunspell/mythes
+
+ -- Didier Roche <didrocks@ubuntu.com>  Thu, 12 Aug 2010 12:56:53 +0200
+
+openoffice.org-dictionaries (1:3.2.1-2) unstable; urgency=high
+
+  * fix hunspell-fr install for new dict name in 3.2.1 (closes: #587908)
+
+ -- Rene Engelhard <rene@debian.org>  Fri, 02 Jul 2010 16:40:30 +0200
+
+openoffice.org-dictionaries (1:3.2.1-1) unstable; urgency=high
+
+  * OpenOffice.org 3.2.1
+  * use th_gen_idx.pl from libmythes-dev
+  * register fr thesaurus and hyphenation (like hunspell-fr) also
+    for BE, CA, CH, MC, LU (closes: #585979)
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 17 Jun 2010 00:43:24 +0200
+
+openoffice.org-dictionaries (1:3.2.0~rc2-5ubuntu1) maverick; urgency=low
+
+  * Merge from debian unstable. (Closes LP: #587706) Remaining changes:
+    - Add dependencies on language-support-writing-* packages.
+      Closes LP: #537609
+    - Fix the unversioned thunderbird entry in Conflicts for the hunspell-*
+      packages.
+    - define symlinks for the fr_FR dictionary too otherwise only the other
+      variants are listed in GNOME dialogs
+    - Refreshed: Add missing compat symlinks. Closes LP: #568760.
+    - openoffice.org-thesaurus-en-us claims to provide en-gb but did not have 
+      a symlink. Closes LP: #578744
+  * myspell-en-za fix in 1:3.2.0~rc2-5 closes LP: #467278.
+
+ -- Chris Cheney <ccheney@ubuntu.com>  Sat, 05 Jun 2010 18:20:00 -0500
+
+openoffice.org-dictionaries (1:3.2.0~rc2-5) unstable; urgency=medium
+
+  * revert
+    "make myspell-en-za depend on -en-gb , use en_GB.aff for en_ZA.aff",
+   thanks Stefano Rivera (closes: #583795)
+  * add explicit debian/source/format 
+
+ -- Rene Engelhard <rene@debian.org>  Mon, 31 May 2010 00:33:35 +0200
+
+openoffice.org-dictionaries (1:3.2.0~rc2-3ubuntu3) lucid; urgency=low
+
+  * Add missing compat symlinks. Closes LP: #568760
+
+ -- Chris Cheney <ccheney@ubuntu.com>  Fri, 23 Apr 2010 13:30:00 -0500
+
+openoffice.org-dictionaries (1:3.2.0~rc2-4) unstable; urgency=low
+
+  * fix compat symlinks for openoffice.org-thesaurus-fr
+  * fix openoffice.org-thesaurus-cas install
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 20 Apr 2010 11:50:40 +0200
+
+openoffice.org-dictionaries (1:3.2.0~rc2-3ubuntu2) lucid; urgency=low
+
+  * Add missing Conflicts/Replaces on the Ubuntu-only
+    openoffice.org-hyphenation (<< 0.5).  LP: #568514.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 23 Apr 2010 09:44:38 +0000
+
+openoffice.org-dictionaries (1:3.2.0~rc2-3ubuntu1) lucid; urgency=low
+
+  * Resync on Debian
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 19 Apr 2010 22:38:26 +0200
+
+openoffice.org-dictionaries (1:3.2.0~rc2-3) unstable; urgency=medium
+
+  * merge from Ubuntu:
+    - add proper /usr/share/myspell/dicts links for fr_FR (closes: #577678) 
+  * fix french thesaurus installation (closes: #578390)
+  * version binaries 1:3.2.0-x
+  * register hyph_de_DE.dic for all de_* 
+
+ -- Rene Engelhard <rene@debian.org>  Mon, 19 Apr 2010 18:31:55 +0200
+
+openoffice.org-dictionaries (1:3.2.0~rc2-2ubuntu2) lucid; urgency=low
+
+  * debian/hunspell-fr.links:
+    - define symlinks for the fr_FR dictionary too otherwise only the 
+      other variants are listed in GNOME dialogs
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 13 Apr 2010 15:25:51 +0200
+
+openoffice.org-dictionaries (1:3.2.0~rc2-2ubuntu1) lucid; urgency=low
+
+  * Merge from debian testing.  Remaining changes:
+    - Add dependencies on language-support-writing-* packages.
+      Closes LP: #537609
+    - Mark hunspell-ro conflicting with myspell-ro.
+    - Fix the unversioned thunderbird entry in Conflicts for the hunspell-*
+      packages.
+
+ -- Chris Cheney <ccheney@ubuntu.com>  Mon, 22 Mar 2010 14:00:00 -0500
+
+openoffice.org-dictionaries (1:3.2.0~rc2-2) unstable; urgency=low
+
+  * version binary packages 3.2.0-x 
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 11 Feb 2010 14:15:33 +0100
+
+openoffice.org-dictionaries (1:3.2.0~rc2-1ubuntu2) lucid; urgency=low
+
+  * Drop all language-support-writing-* except for language-support-writing-en.
+  * Mark hunspell-ro conflicting with myspell-ro. Closes LP: #517582
+
+ -- Chris Cheney <ccheney@ubuntu.com>  Fri, 19 Feb 2010 12:30:00 -0600
+
+openoffice.org-dictionaries (1:3.2.0~rc2-1ubuntu1) lucid; urgency=low
+
+  * Merge from debian testing.  Remaining changes:
+    - Add dependencies on language-support-writing-* packages.
+    - Fix the unversioned thunderbird entry in Conflicts for the
+      hunspell-* packages.
+
+ -- Chris Cheney <ccheney@ubuntu.com>  Mon, 01 Feb 2010 18:00:00 -0600
+
+openoffice.org-dictionaries (1:3.2.0~rc2-1) unstable; urgency=medium
+
+  * OpenOffice.org 3.2.0 rc2 (OOO320_m9) 
+
+ -- Rene Engelhard <rene@debian.org>  Sat, 16 Jan 2010 16:58:24 +0100
+
+openoffice.org-dictionaries (1:3.2.0~beta-1) unstable; urgency=low
+
+  * OpenOffice.org 3.2.0 beta (OOO320_m2)
+    - updates (amongst others) da_DK dicts (closes: #547654) 
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 01 Nov 2009 19:20:51 +0100
+
+openoffice.org-dictionaries (1:3.1.0-4) unstable; urgency=low
+
+  * make myspell-en-za depend on -en-gb , use en_GB.aff for en_ZA.aff
+    (closes: #536643)
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 06 Oct 2009 10:27:57 +0200
+
+openoffice.org-dictionaries (1:3.1.0-3) unstable; urgency=low
+
+  * also move dicts to /usr/share/hunspell. wih compat symlinks. No idea
+    why I missed that in the last upload...
+  * en passant, fix bogus th-TH.aff symlink 
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 18 Aug 2009 23:14:22 +0200
+
+openoffice.org-dictionaries (1:3.1.0-2) unstable; urgency=low
+
+  * move mythes and hyphen stuff to /usr/share/mythes and /usr/share/hyphen 
+  * only recommend openoffice.org (>= 1.0.3) | openoffice.org-writer
+    at openoffice.org-hyphenation-*
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 12 Aug 2009 00:06:08 +0200
+
+openoffice.org-dictionaries (1:3.1.0-1) unstable; urgency=low
+
+  * OpenOffice.org 3.1.0 final release
+  * new: openoffice.org-{hyphenation,thesaurus}-fr
+  * upload to unstable
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 06 May 2009 01:27:38 +0200
+
+openoffice.org-dictionaries (1:3.1.0~ooo310m5-3) experimental; urgency=low
+
+  * add missing fr_MC symlink (closes: #523643) 
+
+ -- Rene Engelhard <rene@debian.org>  Sat, 11 Apr 2009 20:01:27 +0200
+
+openoffice.org-dictionaries (1:3.1.0~ooo310m5-2) experimental; urgency=low
+
+  * provide hunspelll-dictionary-vi and not -fr at hunspell-vi
+    (closes: #520691)
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 22 Mar 2009 11:46:45 +0100
+
+openoffice.org-dictionaries (1:3.0.1~rc1-8ubuntu1) jaunty; urgency=low
+
+  * Merge from debian unstable, remaining changes:
+    - Add dependencies on language-support-writing-* packages.
+    - Fix the unversioned thunderbird entry in Conflicts for the
+      hunspell-* packages.
+
+ -- Chris Cheney <ccheney@ubuntu.com>  Mon, 13 Apr 2009 12:30:00 -0500
+
+openoffice.org-dictionaries (1:3.1.0~ooo310m5-1) experimental; urgency=low
+
+  * new upstream snapshot
+    - includes en_CA dictionary - new package: hunspell-en-ca
+      (closes: #478113, #419095)
+    - other new packages: {hunspell,openoffice.org-hyphenation}-{sr,sh}
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 12 Mar 2009 18:01:13 +0100
+
+openoffice.org-dictionaries (1:3.0.1~rc1-8) unstable; urgency=low
+
+  * add missing fr_MC symlink (closes: #523643) 
+
+ -- Rene Engelhard <rene@debian.org>  Sat, 11 Apr 2009 19:59:41 +0200
+
+openoffice.org-dictionaries (1:3.0.1~rc1-7) unstable; urgency=low
+
+  * provide hunspelll-dictionary-vi and not -fr at hunspell-vi
+    (closes: #520691)
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 22 Mar 2009 11:46:45 +0100
+
+openoffice.org-dictionaries (1:3.0.1~rc1-6) unstable; urgency=low
+
+  * guard update-openoffice-dicts call witn -x (closes: #518975) 
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 11 Mar 2009 23:32:49 +0100
+
+openoffice.org-dictionaries (1:3.0.1~rc1-5) unstable; urgency=low
+
+  * remove bogus myspell-fr-* conflict at hunspell-vi and hunspell-hu
+
+ -- Rene Engelhard <rene@debian.org>  Mon, 02 Mar 2009 02:14:16 +0100
+
+openoffice.org-dictionaries (1:3.0.1~rc1-4) unstable; urgency=low
+
+  * hunspell-hu: conflic/provide/replace myspell-hu (closes: #517353) 
+
+ -- Rene Engelhard <rene@debian.org>  Mon, 02 Mar 2009 01:19:34 +0100
+
+openoffice.org-dictionaries (1:3.0.1~rc1-3ubuntu1) jaunty; urgency=low
+
+  * Merge from debian experimental, remaining changes:
+    - Add dependencies on language-support-writing-* packages.
+    - Fix the unversioned thunderbird entry in Conflicts for the
+      hunspell-* packages.
+
+ -- Chris Cheney <ccheney@ubuntu.com>  Fri, 20 Feb 2009 17:00:00 -0600
+
+openoffice.org-dictionaries (1:3.0.1~rc1-3) unstable; urgency=low
+
+  * upload to unstable 
+  * fix openoffice.org-hyphenation-af.copyright 
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 15 Feb 2009 17:55:45 +0100
+
+openoffice.org-dictionaries (1:3.0.1~rc1-2) experimental; urgency=low
+
+  * upload as 3.0.1-x
+  * fix typo in -en-zas description
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 05 Feb 2009 00:39:00 +0100
+
+openoffice.org-dictionaries (1:3.0.1~rc1-1) experimental; urgency=low
+
+  * OpenOffice.org 3.0.1 rc1 (OOO300_m14) 
+  * new packages: hunspell-hu and openoffice.org-thesaurus-hu 
+
+ -- Rene Engelhard <rene@debian.org>  Sat, 20 Dec 2008 16:47:25 +0100
+
+openoffice.org-dictionaries (1:3.0.0-3) experimental; urgency=low
+
+  * fix typo in description - s/hunpell/hunspell/ (closes: #505809)
+  * register th_en_US_v2 also for en CA (closes: #479328)
+  * cleanup diff.gz; lintian fixes 
+
+ -- Rene Engelhard <rene@debian.org>  Mon, 17 Nov 2008 14:42:11 +0100
+
+openoffice.org-dictionaries (1:3.0.0-2) experimental; urgency=low
+
+  * also register hunspell-fr for fr-MC 
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 19 Oct 2008 11:55:31 +0200
+
+openoffice.org-dictionaries (1:3.0.0-1) experimental; urgency=low
+
+  * new upstream release.
+  * register hunspell-fr also for fr_BE, fr_CA, fr_CH and fr_LU
+    (closes: #502654) 
+  * add set -e to postrm, thanks lintian 
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 19 Oct 2008 03:12:30 +0200
+
+openoffice.org-dictionaries (1:2.4.0~m240-2) unstable; urgency=low
+
+  * version binary packages 1:2.4.0-2
+  * package hunspell-fr 
+
+ -- Rene Engelhard <rene@debian.org>  Sat, 26 Apr 2008 22:51:34 +0200
+
+openoffice.org-dictionaries (1:2.4.0~m240-1) unstable; urgency=low
+
+  * new upstream milestone
+    - updates it_IT dictionary (closes: #329971)
+    - new: openoffice.org-thesaurus-{ne,ru}, openoffice.org-hyphenation-zu,
+      myspell-en-za, hunspell-ne, hunspell-da
+  * debian/myspell-it.copyright: update, now GPLv3
+  * debian/openoffice.org-hyphenation-{af,de,hu}: UTF-8'ize, thanks lintian
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 20 Dec 2007 14:47:44 +0100
+
+openoffice.org-dictionaries (1:2.3.0~src680m225-2) unstable; urgency=low
+
+  * fix openoffice.org-hyphenation-its dictionary.lst entry (closes: #443367)
+  * fix openoffice.org-hyphenation-{af,sl}s copyright
+  * name binary packages 1:2.3.0-x (differences between SRC680_m225 and
+    2.3.0 is just pl_PL hyph/dict (packaged externally) and DicOOo
+    (openoffice.org-common)
+
+ -- Rene Engelhard <rene@debian.org>  Sat, 22 Sep 2007 22:03:57 +0200
+
+openoffice.org-dictionaries (1:2.3.0~src680m225-1) unstable; urgency=low
+
+  * new snapshot
+    - new: openoffice.org-hyphenation-af, openoffice.org-hyphenation-sl
+      (myspell-sl already packaged externally)
+
+ -- Rene Engelhard <rene@debian.org>  Mon, 06 Aug 2007 01:22:11 +0200
+
+openoffice.org-dictionaries (1:2.3.0~src680m219-2) unstable; urgency=low
+
+  * new hyph_it_IT.dic from issue 75287
+
+ -- Rene Engelhard <rene@debian.org>  Fri, 13 Jul 2007 23:42:19 +0200
+
+openoffice.org-dictionaries (1:2.3.0~src680m219-1) unstable; urgency=low
+
+  * new snapshot
+    - new dictionary: af_ZA -> myspell-af
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 05 Jul 2007 15:02:01 +0200
+
+openoffice.org-dictionaries (1:2.2.0-2) unstable; urgency=low
+
+  * upload to unstable
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 11 Apr 2007 13:37:39 +0200
+
+openoffice.org-dictionaries (1:2.2.0-1) experimental; urgency=low
+
+  * new upstream release
+  * add the Iceanimals to en_US.dic (closes: #385183)
+  * add fixed hyph_it_IT.dic from i75287.
+
+ -- Rene Engelhard <rene@debian.org>  Mon,  2 Apr 2007 01:06:21 +0200
+
+openoffice.org-dictionaries (1:2.0.2.99.2.0.3rc5-3) unstable; urgency=low
+
+  * apply patch from Mike Hommey to update en-US.dic to Firefox 2.0b2 changes,
+    thanks (closes: #385507)
+  * add "Debian" to en_GB.dic (closes: #385183)
+  * upload as 2.0.4~rc1-x binary packages
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 10 Sep 2006 08:43:50 +0200
+
+openoffice.org-dictionaries (1:2.0.2.99.2.0.3rc5-2) unstable; urgency=low
+
+  * re-upload with 2.0.3-x binary packages, no changes here since rc5 
+
+ -- Rene Engelhard <rene@debian.org>  Thu, 29 Jun 2006 17:01:13 +0200
+
+openoffice.org-dictionaries (1:2.0.2.99.2.0.3rc5-1) unstable; urgency=low
+
+  * new upstream release candidate.
+  * build openoffice.org-thesarus-sk
+  * Standards-Version: 3.7.2 (no changes needed)
+  * Build-Depends-Indep -> Build-Depends
+  * add sw.{dic.aff} and th.{dic.aff} symlinks to make Mozilla (Thunderbird)
+    show proper language/country names in the dropdown
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 14 Jun 2006 14:21:43 +0200
+
+openoffice.org-dictionaries (1:2.0.1+2.0.2rc1-3) unstable; urgency=low
+
+  * The "too-greedy-seds-are-bad" release.
+  * Fix -cs' description.
+
+ -- Rene Engelhard <rene@debian.org>  Mon,  6 Mar 2006 23:41:31 +0100
+
+openoffice.org-dictionaries (1:2.0.1+2.0.2rc1-2) unstable; urgency=low
+
+  * upload to unstable; call the binary packages 2.0.2-x (no differences
+    between rc1 and final in dictionaries/)
+  * fix typos
+  * readd lost changelog piece
+  * register -hyphenation-de also for de_CH and de_AT 
+
+ -- Rene Engelhard <rene@debian.org>  Mon,  6 Mar 2006 22:35:43 +0100
+
+openoffice.org-dictionaries (1:2.0.1+2.0.2rc1-1) experimental; urgency=low
+
+  * update to 2.0.2rc1
+  * readd de_DE hyphenation, README/license statement fixed
+  * add openoffice.org-hyphenation-hu
+  * make openoffice.org-thesaurus-en-us register itself for en_GB, too and
+    provide openoffice.org-thesaurus-en-gb (closes: #280992)
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 21 Feb 2006 21:19:23 +0100
+
+openoffice.org-dictionaries (1:2.0.0+2.0.1rc-2) unstable; urgency=low
+
+  * upload to unstable; name binary packages 2.0.1-x 
+
+ -- Rene Engelhard <rene@debian.org>  Wed,  4 Jan 2006 12:29:03 +0100
+
+openoffice.org-dictionaries (1:2.0.0+2.0.1rc-1) experimental; urgency=low
+
+  * update to SRC680_m142 aka 2.0.1rc; build openoffice.org-thesaurus-cs
+
+ -- Rene Engelhard <rene@debian.org>  Fri, 25 Nov 2005 17:14:50 +0100
+
+openoffice.org-dictionaries (1:2.0.0-1) unstable; urgency=low
+
+  * Update to OOo 2.0 final release.
+  * build myspell-sw
+  * build myspell-th, suggest openoffice.org-core (>= 1.9.126) since there thai
+    support was added to sal
+  * build also myspell-en-us, myspell-en-gb and myspell-it
+  * rename openoffice.org2-thesaurus-en-us back to
+    openoffice.org-thesaurus-en-us and Conflict/Replace/Provide the former.
+  * remove the hyphenation stuff from the .orig.tar.gz here also
+  * umm. add proper copyright files...
+  * remove sharutils from Build-Depends, not needed anymore
+  * Standards-Version: 3.6.2 (no chagnes needed)
+
+ -- Rene Engelhard <rene@debian.org>  Sat, 22 Oct 2005 03:42:48 +0200
+
+openoffice.org-dictionaries (20050823-1) unstable; urgency=low
+
+  * Remove the openoffice.org-hyphenation-* packages.
+    - The license on the files is "unclear". The hyphenation patterns
+      are considered to be code (written in TeX/LaTeX), licensed under
+      the GPL or the LPPL. For some reason, they appear to be relicensed
+      without reason under the LGPL.
+    - The hyphenation packages are unreasonable small, the packaging
+      should be changed, afteer the license issues have been sorted out.
+  * The hyphenation patterns together with other OOo language data can
+    be downloaded from http://lingucomponent.openoffice.org/auto_instal.html
+    or http://lingucomponent.openoffice.org/manual_instal.html.
+  * Update standards version.
+  * Remove the CVS directories.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 23 Aug 2005 19:01:35 +0200
+
+openoffice.org-dictionaries (20030813-3) unstable; urgency=high
+
+  * temporarily let *-hyphenation-* in contrib... (upload to
+    main was (with sense) rejected because of the small size; will
+    be addressed later; just want to get this important fix out and
+    into sarge...
+  * fix dictionary.lst entry for italian hyphenation, thanks
+    Marco Menardi (closes: #243585)
+  * actually add a 00list file to actually apply the patch....
+ 
+ -- Rene Engelhard <rene@debian.org>  Thu, 22 Apr 2004 05:57:11 +0200
+
+openoffice.org-dictionaries (20030813-2) unstable; urgency=low
+
+  * move to main 
+
+ -- Rene Engelhard <rene@debian.org>  Fri, 17 Oct 2003 12:26:10 +0200
+
+openoffice.org-dictionaries (20030813-1) unstable; urgency=low
+
+  * CVS co from 13.08.2003, OOo 1.1rc3 branch
+    - new package: openoffice.org-hyphenation-it
+  * add forgotten symlinks 
+  * made short descriptions better english and more in sync
+    with the most {a,i}spell dictionary descriptions
+  * add Provides: openoffice.org-hyphenation-en to -hyphenation-en-{gb,us}
+    and Provides: openoffice.org-hyphenation to all
+    openoffice.org-hyphenation-*
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 13 Aug 2003 03:23:34 +0200
+
+openoffice.org-dictionaries (20030617-1) unstable; urgency=low
+
+  * Initial Release. (closes: #202930)
+  * split the dictionaries out of openoffice.org
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 17 Jun 2003 19:33:47 +0200
+
+openoffice.org2-dictionaries (1.9.121+cvs20050804-1) experimental; urgency=low
+
+  * update to cws_src680_thesaurus20, now based on WordNet 2.1 
+
+ -- Rene Engelhard <rene@debian.org>  Thu,  4 Aug 2005 18:37:02 +0200
+
+openoffice.org2-dictionaries (1.9.109-1) experimental; urgency=low
+
+  * update for OOo2
+  * build openoffice.org2-thesaurus-en-us from here
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 15 Jun 2005 02:18:46 +0200
+
