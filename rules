@@ -59,7 +59,7 @@ install: install-indep install-arch
 install-indep:
 	dh_testdir
 	dh_testroot
-	dh_clean -k -i
+	dh_prep -i
 	dh_installdirs -i
 
 	mkdir -p $(CURDIR)/debian/tmp/usr/share/myspell/dicts

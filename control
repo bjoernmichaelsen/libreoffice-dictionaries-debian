@@ -3,9 +3,9 @@ Section: text
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: Debian OpenOffice Team <debian-openoffice@lists.debian.org>
-Build-Depends: debhelper (>> 4.0.0)
+Build-Depends: debhelper (>> 9.0.0)
 Build-Depends-Indep: unzip, libmythes-dev
-Standards-Version: 3.7.2
+Standards-Version: 3.9.4
 
 Package: mythes-en-us
 Architecture: all
@@ -32,19 +32,6 @@ Description: Czech Thesaurus for LibreOffice/OpenOffice.org
  near drop-in replacement for Microsoft(R) Office.
  .
  This package contains an Czech thesaurus for LibreOffice/OpenOffice.org.
-
-Package: mythes-sk
-Architecture: all
-Section: text
-Depends: libreoffice-core | openoffice.org-core (>= 1.9) | language-support-writing-sk, dictionaries-common (>= 0.10) | openoffice.org-updatedicts, ${misc:Depends}
-Provides: mythes-thesaurus, mythes-thesaurus-sk, openoffice.org-thesaurus-sk
-Conflicts: openoffice.org (<< 1.9), openoffice.org-thesaurus-sk (<< 1:3.3.0-7)
-Replaces: openoffice.org-thesaurus-sk (<< 1:3.3.0-7)
-Description: Slovak Thesaurus for LibreOffice/OpenOffice.org
- Openoffice.org is a full-featured office productivity suite that provides a
- near drop-in replacement for Microsoft(R) Office.
- .
- This package contains an Slovak thesaurus for LibreOffice/OpenOffice.org.
 
 Package: mythes-ru
 Architecture: all

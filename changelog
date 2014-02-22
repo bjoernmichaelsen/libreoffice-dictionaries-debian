@@ -2,6 +2,8 @@ openoffice.org-dictionaries (1:3.3.0~rc10-2ubuntu4) UNRELEASED; urgency=low
 
   * drop hunspell-fr (closes: 721643)
   * move to DebSrc3.0
+  * move to debhelper 9 and Standard 3.9.4
+  * temp. remove mythes-sk
 
  -- Bjoern Michaelsen <bjoern.michaelsen@canonical.com>  Fri, 21 Feb 2014 22:54:52 +0100
 
