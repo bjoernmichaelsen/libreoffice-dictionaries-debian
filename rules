@@ -100,7 +100,7 @@ binary-common:
 	dh_compress 
 	dh_fixperms
 	dh_installdeb
-	dh_gencontrol -- -v1:3.3.0-`head -n 1 debian/changelog | awk '{ print $$2 }' | sed -e s/"("// -e s/")"// | cut -d"-" -f2`
+	dh_gencontrol -- -v1:4.2.1-`head -n 1 debian/changelog | awk '{ print $$2 }' | sed -e s/"("// -e s/")"// | cut -d"-" -f2`
 #	dh_gencontrol
 	dh_md5sums
 	dh_builddeb
