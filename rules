@@ -17,20 +17,9 @@ build-arch-stamp: configure-stamp
 
 build-indep: build-indep-stamp
 build-indep-stamp: configure-stamp 
-	cd cs_CZ && \
-		unzip th_cs_CZ_v2.zip && \
-		/usr/share/mythes/th_gen_idx.pl -o th_cs_CZ_v2.idx < th_cs_CZ_v2.dat
-	cd ru_RU && \
-		unzip th_ru_RU_v2.zip && \
-		/usr/share/mythes/th_gen_idx.pl -o th_ru_RU_v2.idx < th_ru_RU_v2.dat
-	cd ne_NP && \
-		unzip th_ne_NP_v2.zip && \
-		/usr/share/mythes/th_gen_idx.pl -o th_ne_NP_v2.idx < th_ne_NP_v2.dat
-	cd hu_HU && \
-		/usr/share/mythes/th_gen_idx.pl -o th_hu_HU_v2.idx < th_hu_HU_v2.dat
-	# no, no fr_FR here, that zip actually is *older* than the th_fr_v2
-	# lying in the same dir...
-
+	for dat in `find dictionaries -type f -name "*.dat"`; do \
+		/usr/share/mythes/th_gen_idx.pl -o $${dat%dat}idx < $${dat}; \
+	done
 	touch build-indep-stamp
 
 clean:
@@ -40,19 +29,7 @@ clean:
 	for pkg in `dh_listpackages`; do \
 		rm -f debian/$$pkg.postinst; rm -f debian/$$pkg.postrm; \
 	done
-	
-	rm -f en_US/th_en_US_v2.dat \
-		en_US/th_en_US_v2.idx
-	rm -f cs_CZ/th_cs_CZ_v2.dat \
-		cs_CZ/th_cs_CZ_v2.idx
-	rm -f sk_SK/th_sk_SK_v2.dat \
-		sk_SK/th_sk_SK_v2.idx
-	rm -f ru_RU/th_ru_RU_v2.dat \
-		ru_RU/th_ru_RU_v2.idx
-	rm -f ne_NP/th_ne_NP_v2.dat \
-		ne_NP/th_ne_NP_v2.idx
-	rm -f hu_HU/th_hu_HU_v2.idx
-
+	find dictionaries/ -type f -name '*.idx' -delete
 	dh_clean
 
 install: install-indep install-arch
@@ -68,23 +45,23 @@ install-indep:
 	mkdir -p $(CURDIR)/debian/tmp/usr/share/hyphen
 	mkdir -p $(CURDIR)/debian/tmp/usr/share/myspell/infos/ooo
 
-	for dic in `find . -type f -name "hyph*.dic"`; do \
+	for dic in `find dictionaries -type f -name "hyph*.dic"`; do \
 		install -m644 $$dic \
 			$(CURDIR)/debian/tmp/usr/share/hyphen; \
 	done
-	for dic in `find . -type f -name "*.dic" ! -name "hyph*"`; do \
+	for dic in `find dictionaries -type f -name "*.dic" ! -name "hyph*"`; do \
 		install -m644 $$dic \
 			$(CURDIR)/debian/tmp/usr/share/hunspell; \
 	done
-	for aff in `find . -type f -name "*.aff"`; do \
+	for aff in `find dictionaries -type f -name "*.aff"`; do \
 		install -m644 $$aff \
 			$(CURDIR)/debian/tmp/usr/share/hunspell; \
 	done
-	for dat in `find . -type f -name "*.dat"`; do \
+	for dat in `find dictionaries -type f -name "*.dat"`; do \
 		install -m644 $$dat \
 			$(CURDIR)/debian/tmp/usr/share/mythes; \
 	done
-	for idx in `find . -type f -name "*.idx"`; do \
+	for idx in `find dictionaries -type f -name "*.idx"`; do \
 		install -m644 $$idx \
 			$(CURDIR)/debian/tmp/usr/share/mythes; \
 	done

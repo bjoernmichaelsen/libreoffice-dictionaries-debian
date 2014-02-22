@@ -1,4 +1,4 @@
-Source: openoffice.org-dictionaries
+Source: libreoffice-dictionaries
 Section: text
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -14,11 +14,11 @@ Depends: libreoffice-core | openoffice.org-core (>= 1.9) | language-support-writ
 Provides: mythes-thesaurus, mythes-thesaurus-en, mythes-en-gb, openoffice.org-thesaurus-en-us
 Conflicts: openoffice.org (<< 1.9), openoffice.org-thesaurus-en-us (<< 1:3.3.0-7)
 Replaces: openoffice.org-thesaurus-en-us (<< 1:3.3.0-7)
-Description: English Thesaurus for LibreOffice/OpenOffice.org
+Description: English Thesaurus for LibreOffice
  Openoffice.org is a full-featured office productivity suite that provides a
  near drop-in replacement for Microsoft(R) Office.
  .
- This package contains an English thesaurus for LibreOffice/OpenOffice.org.
+ This package contains an English thesaurus for LibreOffice.
 
 Package: mythes-cs
 Architecture: all
@@ -27,11 +27,11 @@ Depends: libreoffice-core | openoffice.org-core (>= 1.9) | language-support-writ
 Provides: mythes-thesaurus, mythes-thesaurus-cs, openoffice.org-thesaurus-cs
 Conflicts: openoffice.org (<< 1.9), openoffice.org-thesaurus-cs (<< 1:3.3.0-7)
 Replaces: openoffice.org-thesaurus-cs (<< 1:3.3.0-7)
-Description: Czech Thesaurus for LibreOffice/OpenOffice.org
+Description: Czech Thesaurus for LibreOffice
  Openoffice.org is a full-featured office productivity suite that provides a
  near drop-in replacement for Microsoft(R) Office.
  .
- This package contains an Czech thesaurus for LibreOffice/OpenOffice.org.
+ This package contains an Czech thesaurus for LibreOffice.
 
 Package: mythes-ru
 Architecture: all
@@ -40,11 +40,11 @@ Depends: libreoffice-core | openoffice.org-core (>= 1.9) | language-support-writ
 Provides: mythes-thesaurus, mythes-thesaurus-ru, openoffice.org-thesaurus-ru
 Conflicts: openoffice.org (<< 1.9), openoffice.org-thesaurus-ru (<< 1:3.3.0-7)
 Replaces: openoffice.org-thesaurus-ru (<< 1:3.3.0-7)
-Description: Russian Thesaurus for LibreOffice/OpenOffice.org
+Description: Russian Thesaurus for LibreOffice
  Openoffice.org is a full-featured office productivity suite that provides a
  near drop-in replacement for Microsoft(R) Office.
  .
- This package contains a Russian thesaurus for LibreOffice/OpenOffice.org.
+ This package contains a Russian thesaurus for LibreOffice.
 
 Package: mythes-ne
 Architecture: all
@@ -53,11 +53,11 @@ Depends: libreoffice-core | openoffice.org-core (>= 1.9) | language-support-writ
 Provides: mythes-thesaurus, mythes-thesaurus-ne, openoffice.org-thesaurus-ne
 Conflicts: openoffice.org (<< 1.9), openoffice.org-thesaurus-ne (<< 1:3.3.0-7)
 Replaces: openoffice.org-thesaurus-ne (<< 1:3.3.0-7)
-Description: Nepali Thesaurus for LibreOffice/OpenOffice.org
+Description: Nepali Thesaurus for LibreOffice
  Openoffice.org is a full-featured office productivity suite that provides a
  near drop-in replacement for Microsoft(R) Office.
  .
- This package contains a Nepali thesaurus for LibreOffice/OpenOffice.org.
+ This package contains a Nepali thesaurus for LibreOffice.
 
 Package: mythes-hu
 Architecture: all
@@ -66,11 +66,11 @@ Depends: libreoffice-core | openoffice.org-core (>= 1.9) | language-support-writ
 Provides: mythes-thesaurus, mythes-thesaurus-hu, openoffice.org-thesaurus-hu
 Conflicts: openoffice.org (<< 1.9), openoffice.org-thesaurus-hu (<< 1:3.3.0-7)
 Replaces: openoffice.org-thesaurus-hu (<< 1:3.3.0-7)
-Description: Hungarian Thesaurus for LibreOffice/OpenOffice.org
+Description: Hungarian Thesaurus for LibreOffice
  Openoffice.org is a full-featured office productivity suite that provides a
  near drop-in replacement for Microsoft(R) Office.
  .
- This package contains a Hungarian thesaurus for LibreOffice/OpenOffice.org.
+ This package contains a Hungarian thesaurus for LibreOffice.
 
 Package: mythes-fr
 Architecture: all
@@ -79,11 +79,11 @@ Depends: libreoffice-core | openoffice.org-core (>= 1.9) | language-support-writ
 Provides: mythes-thesaurus, mythes-thesaurus-fr, openoffice.org-thesaurus-fr
 Conflicts: openoffice.org (<< 1.9), openoffice.org-thesaurus-fr (<< 1:3.3.0-7)
 Replaces: openoffice.org-thesaurus-fr (<< 1:3.3.0-7)
-Description: French Thesaurus for LibreOffice/OpenOffice.org
+Description: French Thesaurus for LibreOffice
  Openoffice.org is a full-featured office productivity suite that provides a
  near drop-in replacement for Microsoft(R) Office.
  .
- This package contains a French thesaurus for LibreOffice/OpenOffice.org.
+ This package contains a French thesaurus for LibreOffice.
 
 Package: mythes-ro
 Architecture: all
@@ -92,11 +92,11 @@ Depends: libreoffice-core | openoffice.org-core (>= 1.9) | language-support-writ
 Provides: mythes-thesaurus, mythes-thesaurus-ro, openoffice.org-thesaurus-ro
 Conflicts: openoffice.org (<< 1.9), openoffice.org-thesaurus-ro (<< 1:3.3.0-7)
 Replaces: openoffice.org-thesaurus-ro (<< 1:3.3.0-7)
-Description: Romanian Thesaurus for LibreOffice/OpenOffice.org
+Description: Romanian Thesaurus for LibreOffice
  Openoffice.org is a full-featured office productivity suite that provides a
  near drop-in replacement for Microsoft(R) Office.
  .
- This package contains a Romanian thesaurus for LibreOffice/OpenOffice.org.
+ This package contains a Romanian thesaurus for LibreOffice.
 
 Package: mythes-ca
 Architecture: all
@@ -105,11 +105,11 @@ Depends: libreoffice-core | openoffice.org-core (>= 1.9) | language-support-writ
 Provides: mythes-thesaurus, mythes-thesaurus-ca, openoffice.org-thesaurus-ca
 Conflicts: openoffice.org (<< 1.9), openoffice.org-thesaurus-ca (<< 1:3.3.0-7)
 Replaces: openoffice.org-thesaurus-ca (<< 1:3.3.0-7)
-Description: Catalan Thesaurus for LibreOffice/OpenOffice.org
+Description: Catalan Thesaurus for LibreOffice
  Openoffice.org is a full-featured office productivity suite that provides a
  near drop-in replacement for Microsoft(R) Office.
  .
- This package contains a Catalan thesaurus for LibreOffice/OpenOffice.org.
+ This package contains a Catalan thesaurus for LibreOffice.
 
 Package: myspell-en-us
 Architecture: all
@@ -118,7 +118,7 @@ Depends: dictionaries-common (>= 0.10) | openoffice.org-updatedicts, ${misc:Depe
 Provides: myspell-dictionary, myspell-dictionary-en
 Description: English_american dictionary for myspell
  This is the English_american dictionary for use with the myspell spellchecker
- which is currently used within LibreOffice/OpenOffice.org and the mozilla
+ which is currently used within LibreOffice and the mozilla
  spellchecker.
 
 Package: myspell-en-gb
@@ -128,7 +128,7 @@ Depends: dictionaries-common (>= 0.10) | openoffice.org-updatedicts, ${misc:Depe
 Provides: myspell-dictionary, myspell-dictionary-en
 Description: English_british dictionary for myspell
  This is the English_british dictionary for use with the myspell spellchecker
- which is currently used within LibreOffice/OpenOffice.org and the mozilla
+ which is currently used within LibreOffice and the mozilla
  spellchecker.
 
 Package: myspell-en-za
@@ -138,7 +138,7 @@ Depends: dictionaries-common (>= 0.10) | openoffice.org-updatedicts, ${misc:Depe
 Provides: myspell-dictionary, myspell-dictionary-en
 Description: English_southafrican dictionary for myspell
  This is the English_southafrican dictionary for use with the myspell
- spellchecker which is currently used within LibreOffice/OpenOffice.org and the mozilla
+ spellchecker which is currently used within LibreOffice and the mozilla
  spellchecker.
 
 Package: myspell-af
@@ -148,7 +148,7 @@ Depends: dictionaries-common (>= 0.10) | openoffice.org-updatedicts, ${misc:Depe
 Provides: myspell-dictionary, myspell-dictionary-af
 Description: Afrikaans dictionary for myspell
  This is the Afrikaans dictionary for use with the myspell spellchecker
- which is currently used within LibreOffice/OpenOffice.org and the mozilla
+ which is currently used within LibreOffice and the mozilla
  spellchecker
 
 Package: myspell-it
@@ -158,7 +158,7 @@ Depends: dictionaries-common (>= 0.10) | openoffice.org-updatedicts, ${misc:Depe
 Provides: myspell-dictionary, myspell-dictionary-it
 Description: Italian dictionary for myspell
  This is the Italian dictionary for use with the myspell spellchecker
- which is currently used within LibreOffice/OpenOffice.org and the mozilla
+ which is currently used within LibreOffice and the mozilla
  spellchecker
 
 Package: myspell-sw
@@ -169,7 +169,7 @@ Provides: myspell-dictionary, myspell-dictionary-sw
 Suggests: openoffice.org
 Description: Swahili dictionary for myspell
  This is the Swahili dictionary for use with the myspell
- spellchecker which is currently used within LibreOffice/OpenOffice.org and the
+ spellchecker which is currently used within LibreOffice and the
  mozilla spellchecker.
 
 Package: myspell-th
@@ -180,7 +180,7 @@ Provides: myspell-dictionary, myspell-dictionary-th
 Suggests: openoffice.org (>= 1.9.126)
 Description: Thai dictionary for myspell
  This is the Thai dictionary for use with the myspell
- spellchecker which is currently used within LibreOffice/OpenOffice.org and the
+ spellchecker which is currently used within LibreOffice and the
  mozilla spellchecker.
 
 Package: hunspell-en-ca
@@ -289,16 +289,6 @@ Conflicts: openoffice.org (<= 1.0.3-2), myspell-da, mozilla-browser (<< 1.8+1.1.
 Description: Serbian (Cyrillic) dictionary for hunspell
  This is the Serbian dictionary for use with the hunspell spellchecker
 
-Package: hunspell-sh
-Architecture: all
-Section: text
-Depends: dictionaries-common (>= 0.10) | openoffice.org-updatedicts, ${misc:Depends}
-Provides: hunspell-dictionary, hunspell-dictionary-sh
-Suggests: hunspell, openoffice.org-hunspell | openoffice.org-core (>= 2.0.2)
-Conflicts: openoffice.org (<= 1.0.3-2), myspell-da, mozilla-browser (<< 1.8+1.1.1-2), iceape-browser (<< 1.1.1-2), firefox (<< 2.0.0.3-2), thunderbird (<< 2.0.0.1+0dfsg-0), iceweasel (<< 2.0.0.3-2), icedove (<< 2.0.0.0-4), openoffice.org-core (<< 2.1~m190-1), libxul0d (= 1.8.0.11-3)
-Description: Serbian (Latin) dictionary for hunspell
- This is the Serbian dictionary for use with the hunspell spellchecker
-
 Package: hunspell-ro
 Architecture: all
 Section: text
@@ -309,18 +299,6 @@ Conflicts: openoffice.org (<= 1.0.3-2), mozilla-browser (<< 1.8+1.1.1-2), iceape
 Description: Romanian dictionary for hunspell
  This is the Romanian dictionary for use with the hunspell spellchecker
 
-Package: hyphen-sh
-Architecture: all
-Section: text
-Depends: dictionaries-common (>= 0.10) | openoffice.org-updatedicts, ${misc:Depends}
-Recommends: libreoffice-writer | openoffice.org-writer
-Provides: hyphen-hyphenation-patterns, hyphen-hyphenation-patterns-sh, openoffice.org-hyphenation-sh
-Replaces: openoffice.org-hyphenation-sh (<< 1:3.3.0-7)
-Conflicts: openoffice.org-hyphenation-sh (<< 1:3.3.0-7)
-Description: Serbian (Latin) hyphenation patterns for LibreOffice/OpenOffice.org
- This package contains the Serbian hyphenation patterns for 
- LibreOffice/OpenOffice.org
-
 Package: hyphen-sr
 Architecture: all
 Section: text
@@ -329,9 +307,9 @@ Recommends: libreoffice-writer | openoffice.org-writer
 Provides: hyphen-hyphenation-patterns, hyphen-hyphenation-patterns-sr, openoffice.org-hyphenation-sr
 Replaces: openoffice.org-hyphenation-sr (<< 1:3.3.0-7)
 Conflicts: openoffice.org-hyphenation-sr (<< 1:3.3.0-7)
-Description: Serbian (Cyrillic) hyphenation patterns for LibreOffice/OpenOffice.org
+Description: Serbian (Cyrillic) hyphenation patterns for LibreOffice
  This package contains the Serbian hyphenation patterns for
- LibreOffice/OpenOffice.org
+ LibreOffice
 
 Package: hyphen-de
 Architecture: all
@@ -341,9 +319,9 @@ Recommends: libreoffice-writer | openoffice.org-writer
 Provides: hyphen-hyphenation-patterns, hyphen-hyphenation-patterns-de, openoffice.org-hyphenation-de
 Replaces: openoffice.org-hyphenation-de (<< 1:3.3.0-7)
 Conflicts: openoffice.org-hyphenation-de (<< 1:3.3.0-7)
-Description: German hyphenation patterns for LibreOffice/OpenOffice.org
+Description: German hyphenation patterns for LibreOffice
  This package contains the German hyphenation patterns for 
- LibreOffice/OpenOffice.org
+ LibreOffice
 
 Package: hyphen-hu
 Architecture: all
@@ -353,9 +331,9 @@ Recommends: libreoffice-writer | openoffice.org-writer
 Provides: hyphen-hyphenation-patterns, hyphen-hyphenation-patterns-hu, openoffice.org-hyphenation-hu
 Replaces: openoffice.org-hyphenation-hu (<< 1:3.3.0-7)
 Conflicts: openoffice.org-hyphenation-hu (<< 1:3.3.0-7)
-Description: Hungarian hyphenation patterns for LibreOffice/OpenOffice.org
+Description: Hungarian hyphenation patterns for LibreOffice
  This package contains the Hungarian hyphenation patterns for
- LibreOffice/OpenOffice.org
+ LibreOffice
 
 Package: hyphen-it
 Architecture: all
@@ -365,9 +343,9 @@ Recommends: libreoffice-writer | openoffice.org-writer
 Provides: hyphen-hyphenation-patterns, hyphen-hyphenation-patterns-it, openoffice.org-hyphenation-it
 Replaces: openoffice.org-hyphenation-it (<< 1:3.3.0-7)
 Conflicts: openoffice.org-hyphenation-it (<< 1:3.3.0-7)
-Description: Italian hyphenation patterns for LibreOffice/OpenOffice.org
+Description: Italian hyphenation patterns for LibreOffice
  This package contains the Italian hyphenation patterns for
- LibreOffice/OpenOffice.org
+ LibreOffice
 
 Package: hyphen-sl
 Architecture: all
@@ -377,9 +355,9 @@ Recommends: libreoffice-writer | openoffice.org-writer
 Provides: hyphen-hyphenation-patterns, hyphen-hyphenation-patterns-sl, openoffice.org-hyphenation-sl
 Replaces: openoffice.org-hyphenation-sl (<< 1:3.3.0-7)
 Conflicts: openoffice.org-hyphenation-sl (<< 1:3.3.0-7)
-Description: Slovenian hyphenation patterns for LibreOffice/OpenOffice.org
+Description: Slovenian hyphenation patterns for LibreOffice
  This package contains the Slovenian hyphenation patterns for
- LibreOffice/OpenOffice.org
+ LibreOffice
 
 Package: hyphen-af
 Architecture: all
@@ -389,9 +367,9 @@ Recommends: libreoffice-writer | openoffice.org-writer
 Provides: hyphen-hyphenation-patterns, hyphen-hyphenation-patterns-af, openoffice.org-hyphenation-af
 Replaces: openoffice.org-hyphenation-af (<< 1:3.3.0-7)
 Conflicts: openoffice.org-hyphenation-af (<< 1:3.3.0-7)
-Description: Afrikaans hyphenation patterns for LibreOffice/OpenOffice.org
+Description: Afrikaans hyphenation patterns for LibreOffice
  This package contains the Afrikaans hyphenation patterns for
- LibreOffice/OpenOffice.org
+ LibreOffice
 
 Package: hyphen-zu
 Architecture: all
@@ -401,9 +379,9 @@ Recommends: libreoffice-writer | openoffice.org-writer
 Provides: hyphen-hyphenation-patterns, hyphen-hyphenation-patterns-zu, openoffice.org-hyphenation-ui
 Replaces: openoffice.org-hyphenation-zu (<< 1:3.3.0-7)
 Conflicts: openoffice.org-hyphenation-zu (<< 1:3.3.0-7)
-Description: Zulu hyphenation patterns for LibreOffice/OpenOffice.org
+Description: Zulu hyphenation patterns for LibreOffice
  This package contains the Zulu hyphenation patterns for
- LibreOffice/OpenOffice.org
+ LibreOffice
 
 Package: hyphen-fr
 Architecture: all
@@ -413,9 +391,9 @@ Recommends: libreoffice-writer | openoffice.org-writer
 Provides: hyphen-hyphenation-patterns, hyphen-hyphenation-patterns-fr, openoffice.org-hyphenation-fr
 Replaces: openoffice.org-hyphenation-fr (<< 1:3.3.0-7)
 Conflicts: openoffice.org-hyphenation-fr (<< 1:3.3.0-7)
-Description: French hyphenation patterns for LibreOffice/OpenOffice.org
+Description: French hyphenation patterns for LibreOffice
  This package contains the French hyphenation patterns for
- LibreOffice/OpenOffice.org
+ LibreOffice
 
 Package: hyphen-ro
 Architecture: all
@@ -425,9 +403,9 @@ Recommends: libreoffice-writer | openoffice.org-writer
 Provides: hyphen-hyphenation-patterns, hyphen-hyphenation-patterns-ro, openoffice.org-hyphenation-ro
 Replaces: openoffice.org-hyphenation-ro (<< 1:3.3.0-7)
 Conflicts: openoffice.org-hyphenation-ro (<< 1:3.3.0-7)
-Description: Romanian hyphenation patterns for LibreOffice/OpenOffice.org
+Description: Romanian hyphenation patterns for LibreOffice
  This package contains the Romanian hyphenation patterns for
- LibreOffice/OpenOffice.org
+ LibreOffice
 
 Package: hyphen-ca
 Architecture: all
@@ -437,7 +415,7 @@ Recommends: libreoffice-writer | openoffice.org-writer
 Provides: hyphen-hyphenation-patterns, hyphen-hyphenation-patterns-ca, openoffice.org-hyphenation-ca
 Replaces: openoffice.org-hyphenation-ca (<< 1:3.3.0-7)
 Conflicts: openoffice.org-hyphenation-ca (<< 1:3.3.0-7)
-Description: Catalan hyphenation patterns for LibreOffice/OpenOffice.org
+Description: Catalan hyphenation patterns for LibreOffice
  This package contains the Catalan hyphenation patterns for
- LibreOffice/OpenOffice.org
+ LibreOffice
 
