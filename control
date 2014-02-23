@@ -164,7 +164,7 @@ Description: Italian dictionary for myspell
 Package: mythes-sk
 Architecture: all
 Section: text
-Depends: libreoffice-core | openoffice.org-core (>= 1.9) | language-support-writing-sk, dictionaries-common (>= 0.10) | openoffice.or
+Depends: dictionaries-common (>= 0.10) | openoffice.org, ${misc:Depends}
 Provides: mythes-thesaurus, mythes-thesaurus-sk, openoffice.org-thesaurus-sk
 Conflicts: openoffice.org (<< 1.9), openoffice.org-thesaurus-sk (<< 1:3.3.0-7)
 Replaces: openoffice.org-thesaurus-sk (<< 1:3.3.0-7)
