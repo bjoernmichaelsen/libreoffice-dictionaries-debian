@@ -71,7 +71,6 @@ install-indep:
 		install -m644 $$idx \
 			$(CURDIR)/debian/tmp/usr/share/mythes; \
 	done
-#$(call install_copyright_file, hyphen-zu,             /README_.txt)
 	$(call install_copyright_file, hunspell-da,           da_DK/HYPH_da_DK_README.txt)
 	$(call install_copyright_file, hunspell-de-at-frami,  de/README_de_DE_frami.txt)
 	$(call install_copyright_file, hunspell-de-ch-frami,  de/README_de_DE_frami.txt)
